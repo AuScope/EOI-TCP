@@ -30,7 +30,6 @@
         <!-- stupid PMD plugin work around... -->
         <targetJdk>1.6</targetJdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jetty.version>6.1.25</jetty.version>
         <log4j.version>1.2.16</log4j.version>
         <spring.version>3.0.5.RELEASE</spring.version>
         <spring.security.version>3.0.5.RELEASE</spring.security.version>
@@ -117,9 +116,8 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
-                <version>${jetty.version}</version>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
                 <dependencies>
                     <dependency>
                         <groupId>log4j</groupId>
@@ -128,9 +126,16 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <webApp>${project.build.directory}/${project.build.finalName}</webApp>
+                    <webAppConfig>
+                        <contextPath>/</contextPath>
+                    </webAppConfig>
                     <scanIntervalSeconds>9999</scanIntervalSeconds>
-                    <contextPath>/</contextPath>
+                    <loginServices>
+                        <loginService  implementation="org.eclipse.jetty.security.HashLoginService">  
+                            <name>AuScope Portal</name>  
+                            <config>jetty-users.properties</config>  
+                        </loginService>
+                    </loginServices>
                 </configuration>
             </plugin>
             <plugin>
