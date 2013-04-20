@@ -83,7 +83,7 @@
             </head>
             <body>
                 <div>
-                    <img alt="" src="img/img-auscope-banner.gif" style="border: 0px solid;" />
+                    <img alt="" src="img/csiro-banner.jpg" style="border: 0px solid;" />
                 </div>
                 <!-- we apply the template on both featuremember and featuremembers as both are valid response.
                      GeoServer provides the option of encoding the different result via its setting
