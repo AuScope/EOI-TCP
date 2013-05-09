@@ -167,6 +167,7 @@
                 <constructor-arg index="1" value="32"/>
             </bean>
         </property>
+        <property name="hidden" value="true"/>
     </bean>
     <bean id="knownTypeGeotransects" class="org.auscope.portal.core.view.knownlayer.KnownLayer">
         <constructor-arg name="id" value="ga-geotransects"/>
@@ -239,6 +240,7 @@
                 <constructor-arg index="1" value="32"/>
             </bean>
         </property>
+        <property name="hidden" value="true"/>
     </bean>
     <bean id="knownTypeYilgarnGeochemistry" class="org.auscope.portal.core.view.knownlayer.KnownLayer">
         <constructor-arg name="id" value="yilgarn-geochem"/>
