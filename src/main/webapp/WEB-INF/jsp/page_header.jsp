@@ -1,7 +1,7 @@
    <div id="header-container">
       <div id="logo">
          <h1>
-            <a href="#" onclick="window.open('about.html','AboutWin','toolbar=no, menubar=no,location=no,resizable=no,scrollbars=yes,statusbar=no,top=100,left=200,height=650,width=450');return false"><img alt="" src="img/csiro-banner.jpg"></a>
+            <a href="#" onclick="window.open('about.html','AboutWin','toolbar=no, menubar=no,location=no,resizable=no,scrollbars=yes,statusbar=no,top=100,left=200,height=650,width=450');return false"><img alt="" src="img/csiro_portal_banner.jpg"></a>
          </h1>
       </div>
       <div id="menu">
